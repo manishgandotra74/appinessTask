@@ -20,11 +20,11 @@ app.use(function (req, res, next) {
 });
 
 /// routes files 
-const products = require('./router/product-cat');
-app.use('/products', products);
+const user = require('./router/user');
+app.use('/user', user);
 
 // mongo db connnection made 
-mongoose.connect('mongodb+srv://Manish:u5NldlSW5vLy3qjy@letstalk-nviuu.mongodb.net/Product-categories?ssl=true&authSource=admin&retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://Manish:u5NldlSW5vLy3qjy@letstalk-nviuu.mongodb.net/Apusers?ssl=true&authSource=admin&retryWrites=true&w=majority',
  {useNewUrlParser: true})
 app.listen(process.env.PORT || 9000)
 module.exports = app;
