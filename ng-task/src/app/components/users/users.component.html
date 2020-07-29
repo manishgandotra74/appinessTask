@@ -1,0 +1,29 @@
+<nz-input-group [nzSuffix]="suffixIconSearch" style="height: 50px;border: 1px solid brown;">
+    <input type="text" nz-input placeholder="Search Users" 
+      (keyup)="searchrepo($event)"/>
+  </nz-input-group>
+  <ng-template #suffixIconSearch>
+    <i nz-icon nzType="search"></i>
+  </ng-template>
+<nz-table #basicTable [nzData]="userlist">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Repo</th>
+  
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of userlist">
+        <td>{{data.id}}</td>
+        <td>
+        <img src = {{data.avatar_url}} style="height: 50px;">
+            {{data.login}}
+        </td>
+        <td>
+            <a [routerLink]="['/repositories']" [queryParams]={id:data.login} class="btn btn-link" style="display:inline;">View Repositories</a>  <br/>
+        </td>
+  
+      </tr>
+    </tbody>
+  </nz-table>

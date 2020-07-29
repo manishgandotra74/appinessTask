@@ -1,0 +1,23 @@
+<nz-table #basicTable [nzData]="repolist">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Github Path</th>
+      <th>Language</th>
+      <th>Total Forks</th>
+      <th>Total Issues</th>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of repolist">
+      <td>{{data.id}}</td>
+      <td>{{data.name}}</td>
+      <td>{{data.git_url}}</td>
+      <td>{{data.language}}</td>
+      <td>{{data.forks}}</td>
+      <td>{{data.open_issues}}</td>
+
+    </tr>
+  </tbody>
+</nz-table>

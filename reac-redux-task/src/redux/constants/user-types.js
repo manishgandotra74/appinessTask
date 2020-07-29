@@ -1,0 +1,7 @@
+export const Types = {
+    SET_SIGN_IN_MESSAGE: "SET_SIGN_IN_MESSAGE",
+    GET_USER_LIST:"GET_USER_LIST",
+    LOGIN_STATUS:"LOGIN_STATUS",
+    USER_LIST:"USER_LIST"
+  };
+  
